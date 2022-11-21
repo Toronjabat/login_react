@@ -17,6 +17,10 @@ export const Login = () => {
             if(usu === "admin" && pas==="123"){
                 setMiLogin("true");
                 document.getElementById("form_login").style.display = "none";
+                let ac ={usu,pas}
+                let cuenta = JSON.stringify(ac);
+                localStorage.setItem('cuenta',cuenta);
+                                
             } else {
                 setMiLogin("false");
                 alert("Error De Usuario y/o contraseña");
@@ -24,10 +28,13 @@ export const Login = () => {
                 document.getElementById("txtpas").value = "";
                 document.getElementById("txtusu").focus();
             }
-        }
-        }
+            if(setMiLogin = true) {
 
 
+            }
+        }
+        }
+    
     return (
 
         <div className="container">
@@ -45,7 +52,7 @@ export const Login = () => {
             <input type="submit" className="btn btn-primary" value="Login" onClick={ iniciarSesion }/>
         </form>
 
-        {miLogin === "true" && <HangImage/>}
+        {miLogin === "true" && <HangImage usu={usu}/>}
 
     </div>
     )
