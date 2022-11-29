@@ -3,18 +3,32 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  background-image: url("https://www.cronista.com/files/image/484/484530/6358377f7527b.jpg");
+  /*background-image: url("https://www.cronista.com/files/image/484/484530/6358377f7527b.jpg");*/
+  background-image: url('assets/granhermano.jpeg');
   background-repeat:no-repeat; background-position: center; background-size: cover; height: 100%;
+  background-color: transparent;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.gallery {
+display: grid;
+gap: 1rem;
+grid-auto-rows: dense;
+grid-auto-rows: 22rem;
+grid-template-columns: repeat(auto-fill, minmax (15rem, 1fr));
+background-color: transparent;
+}
+
+.featured {
+  grid-column: span 2;
+  background-color: transparent;
 }
 
 a {
@@ -27,16 +41,23 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 300;
   display: flex;
+  flex: 1;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: transparent;
 }
 
 h1 {
+  position: relative;
   font-size: 3.2em;
   line-height: 1.1;
+  
+
 }
 
 button {
@@ -60,13 +81,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #117fe0;
+    background-color: transparent;
+
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #c11c1cd9;
   }
 }
