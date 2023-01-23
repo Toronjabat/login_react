@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {HangImage} from './HangImage';
+import io from 'socket.io-client';
+const socket = io('http://localhost:4000')
 
 export const Login = () => {
 
@@ -34,7 +36,8 @@ export const Login = () => {
                 document.getElementById("form_login").style.display = "none";
                 let ac ={usu,pas}
                 let cuenta = JSON.stringify(ac);
-                localStorage.setItem('cuenta',cuenta);     
+                localStorage.setItem('cuenta',cuenta);   
+                
             } else
 
                 if(usu === "facundo" && pas==="nn3003"){
@@ -131,6 +134,14 @@ export const Login = () => {
                     let ac ={usu,pas}
                     let cuenta = JSON.stringify(ac);
                     localStorage.setItem('cuenta',cuenta);     
+                } else
+
+                if(usu === "joaquin" && pas==="nn3003"){
+                    setMiLogin("true");
+                    document.getElementById("form_login").style.display = "none";
+                    let ac ={usu,pas}
+                    let cuenta = JSON.stringify(ac);
+                    localStorage.setItem('cuenta',cuenta);     
                 } 
 
             else {
@@ -140,7 +151,10 @@ export const Login = () => {
                 document.getElementById("txtpas").value = "";
                 document.getElementById("txtusu").focus();
             }
-        
+// ver como hacer para que traiga la lista de usuarios
+            socket.emit('usuario', usu)  
+            console.log(usu)
+
         }
         }
     
