@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {HangImage} from './HangImage';
+import io from 'socket.io-client';
+const socket = io('http://localhost:4000')
 
 export const Login = () => {
 
@@ -34,10 +36,11 @@ export const Login = () => {
                 document.getElementById("form_login").style.display = "none";
                 let ac ={usu,pas}
                 let cuenta = JSON.stringify(ac);
-                localStorage.setItem('cuenta',cuenta);     
+                localStorage.setItem('cuenta',cuenta);   
+                
             } else
 
-                if(usu === "facundo" && pas==="nn3003"){
+                if(usu === "facundo" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -45,7 +48,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "juanma" && pas==="nn3003"){
+                if(usu === "juanma" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -53,7 +56,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "araceli" && pas==="nn3003"){
+                if(usu === "araceli" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -61,7 +64,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "patricio" && pas==="nn3003"){
+                if(usu === "patricio" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -69,7 +72,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "danilo" && pas==="nn3003"){
+                if(usu === "danilo" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -77,7 +80,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "maru" && pas==="nn3003"){
+                if(usu === "maru" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -85,7 +88,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "gonzalo" && pas==="nn3003"){
+                if(usu === "gonzalo" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -93,7 +96,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "leandro" && pas==="nn3003"){
+                if(usu === "leandro" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -101,7 +104,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "matias" && pas==="nn3003"){
+                if(usu === "matias" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -109,7 +112,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "josefina" && pas==="nn3003"){
+                if(usu === "josefina" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -117,7 +120,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "nicolas" && pas==="nn3003"){
+                if(usu === "nicolas" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -125,7 +128,15 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "franco" && pas==="nn3003"){
+                if(usu === "franco" && pas==="prueba123"){
+                    setMiLogin("true");
+                    document.getElementById("form_login").style.display = "none";
+                    let ac ={usu,pas}
+                    let cuenta = JSON.stringify(ac);
+                    localStorage.setItem('cuenta',cuenta);     
+                } else
+
+                if(usu === "joaquin" && pas==="prueba123"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -140,7 +151,10 @@ export const Login = () => {
                 document.getElementById("txtpas").value = "";
                 document.getElementById("txtusu").focus();
             }
-        
+// ver como hacer para que traiga la lista de usuarios
+            socket.emit('usuario', usu)  
+            console.log(usu)
+
         }
         }
     
