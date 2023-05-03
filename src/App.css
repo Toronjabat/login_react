@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

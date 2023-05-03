@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {HangImage} from './HangImage';
 import io from 'socket.io-client';
-const socket = io('http://localhost:4000')
+const socket = io('http://localhost:4000');
 
 export const Login = () => {
 
@@ -21,9 +21,8 @@ export const Login = () => {
             document.getElementById("form_login").style.display = "none";
         }
 
-
     },[])
- 
+     
     function iniciarSesion(e){
         e.preventDefault();
         var txtusu = document.getElementById("txtusu").value;
@@ -31,7 +30,7 @@ export const Login = () => {
         if (txtusu.length===0 || txtpas.length===0){
             alert("Complete los datos faltantes!!");
         }else{
-            if(usu === "david" && pas==="nn3003"){
+            if(usu === "David" && pas==="nn3003"){
                 setMiLogin("true");
                 document.getElementById("form_login").style.display = "none";
                 let ac ={usu,pas}
@@ -40,7 +39,7 @@ export const Login = () => {
                 
             } else
 
-                if(usu === "facundo" && pas==="nn3003"){
+                if(usu === "Facundo" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -48,7 +47,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "juanma" && pas==="nn3003"){
+                if(usu === "Juanma" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -56,7 +55,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "araceli" && pas==="nn3003"){
+                if(usu === "Araceli" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -64,7 +63,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "patricio" && pas==="nn3003"){
+                if(usu === "Patricio" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -72,7 +71,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "danilo" && pas==="nn3003"){
+                if(usu === "Danilo" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -80,7 +79,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "maru" && pas==="nn3003"){
+                if(usu === "Maru" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -88,7 +87,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "gonzalo" && pas==="nn3003"){
+                if(usu === "Gonzalo" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -96,7 +95,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "leandro" && pas==="nn3003"){
+                if(usu === "Leandro" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -104,7 +103,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "matias" && pas==="nn3003"){
+                if(usu === "Matias" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -112,7 +111,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "josefina" && pas==="nn3003"){
+                if(usu === "Josefina" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -120,7 +119,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "nicolas" && pas==="nn3003"){
+                if(usu === "Nicolas" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -128,7 +127,7 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "franco" && pas==="nn3003"){
+                if(usu === "Franco" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
@@ -136,7 +135,23 @@ export const Login = () => {
                     localStorage.setItem('cuenta',cuenta);     
                 } else
 
-                if(usu === "joaquin" && pas==="nn3003"){
+                if(usu === "Joaquin" && pas==="nn3003"){
+                    setMiLogin("true");
+                    document.getElementById("form_login").style.display = "none";
+                    let ac ={usu,pas}
+                    let cuenta = JSON.stringify(ac);
+                    localStorage.setItem('cuenta',cuenta);     
+                } else
+
+                if(usu === "Delfina" && pas==="nn3003"){
+                    setMiLogin("true");
+                    document.getElementById("form_login").style.display = "none";
+                    let ac ={usu,pas}
+                    let cuenta = JSON.stringify(ac);
+                    localStorage.setItem('cuenta',cuenta);     
+                } else
+
+                if(usu === "Alejandra" && pas==="nn3003"){
                     setMiLogin("true");
                     document.getElementById("form_login").style.display = "none";
                     let ac ={usu,pas}
